@@ -1,0 +1,198 @@
+﻿@model WebApplication1.Models.JobDetails
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+   <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="~/jobportal/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/animate.css">
+
+    <link rel="stylesheet" href="~/jobportal/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/jobportal/css/aos.css">
+    <link rel="stylesheet" href="~/jobportal/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/jobportal/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="~/jobportal/css/flaticon.css">
+    <link rel="stylesheet" href="~/jobportal/css/icomoon.css">
+    <link rel="stylesheet" href="~/jobportal/css/style.css">
+</head>
+<body>
+    <!-- END nav -->
+    <div class="hero-wrap js-fullheight"  data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
+                <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
+                    <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Post a Job</span></p>
+                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Post a Job</h1>
+                </div>
+            </div>
+        </div>
+    </div>   
+@using (Html.BeginForm("Create", "JobDetails", FormMethod.Post,
+                                      new { enctype = "multipart/form-data" }))
+    {
+    @Html.ValidationSummary(true)
+        <div class="alert alert-danger"id="error-div" style="display:none">
+            <span id="view-err">
+
+            </span>
+        </div>
+    <div class="ftco-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8 mb-5 p-5 bg-white">
+                    <form action="#" class="p-5 bg-white">
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" id="fullname" name="JobTitle" class="form-control" placeholder="Job Title">
+                            </div>
+                        </div>
+
+                        <div class="row form-group mb-5">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" id="fullname" name="CompanyName" class="form-control" placeholder="Company Name">
+                            </div>
+                        </div>
+                        <div class="row form-group mb-5">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="file" name="upload" id="jobimage" />
+                            </div>
+                        </div>
+                        <div class="row form-group mb-4">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" name="Address" class="form-control" placeholder="Address">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" name="JobType" class="form-control" placeholder="Job Type">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" name="EducationLevel" class="form-control" placeholder="Experience Needed">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" name="Languages" class="form-control" placeholder="Languages">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" name="Vacancies" class="form-control" placeholder="Vacancies">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" name="Salary" class="form-control" placeholder="Salary">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <label class="font-weight-bold" for="fullname">Job Requirements</label>
+                                @Html.TextAreaFor(model => model.JobRequirements, new { @class = "form-control", @id = "JobRequirements" })
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input type="submit" value="Post" class="btn btn-primary  py-2 px-5">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+        
+                <div class="col-lg-4">
+                    <div class="p-4 mb-3 bg-white">
+                        <h3 class="h5 text-black mb-3">Contact Info</h3>
+                        <p class="mb-0 font-weight-bold">Address</p>
+                        <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                        <p class="mb-0 font-weight-bold">Phone</p>
+                        <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                        <p class="mb-0 font-weight-bold">Email Address</p>
+                        <p class="mb-0"><a href="#"><span class="__cf_email__" data-cfemail="671e081215020a060e0b2703080a060e094904080a">[email&#160;protected]</span></a></p>
+                    </div>
+
+                    <div class="p-4 mb-3 bg-white">
+                        <h3 class="h5 text-black mb-3">More Info</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur</p>
+                        <p><a href="#" class="btn btn-primary  py-2 px-4">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+ 
+        </div>
+   
+    </div>
+    }
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+  
+    <!-- loader -->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        CKEDITOR.replace("JobRequirements");
+    </script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $("#save").click(function () {
+                debugger;
+                // check input is empty
+                //if ($("#jobimage").val() == "") {
+                //    $("#error-div").fadeIn()
+                //    $("#view-err").append("please enter the image");
+                //    return flase;
+                //}
+                // update photo
+
+                // check the image extension is valid
+                var filename = document.getElementById("jobimage").value;
+                var extensionImg = filename.substr(filename.lastIndexOf('.') + 1);
+                var validExtensions = ['jpg', 'png', 'gif', 'bmp'];
+                if ($.inArray(extensionImg, validExtensions) == -1) {
+                    $("#error-div").fadeIn()
+                    $("#view-err").append("please enter the corrert extensions");
+                    return false;
+                }
+                // check the image size is valid(2 mb)
+                var myFileSize = document.getElementById("jobimage").files[0].size / 1024 / 1024;
+                if (myFileSize > 2) {
+                    $("#error-div").fadeIn()
+                    $("#view-err").append("please enter the imagesize less 2 mb");
+                    return false;
+                }
+
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+﻿@model WebApplication1.Models.JobDetails
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JobPortal - Free Bootstrap 4 Template by Colorlib</title>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="~/jobportal/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/animate.css">
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/jobportal/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/jobportal/css/aos.css">
+    <link rel="stylesheet" href="~/jobportal/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/jobportal/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="~/jobportal/css/flaticon.css">
+    <link rel="stylesheet" href="~/jobportal/css/icomoon.css">
+    <link rel="stylesheet" href="~/jobportal/css/style.css">
+    <link href="~/jobportal/css/css/StyleSheet2.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!-- END nav -->
+    <div class="hero-wrap js-fullheight"  data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
+                <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
+                    <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Details</span></p>
+                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">@Html.DisplayFor(model => model.JobTitle)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ftco-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-8 mb-5">
+                    <form action="#" class="p-5 ">
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0 bg-white details">
+                                <h1 class="job-name-details">@Model.JobTitle</h1>
+                                <p class="company-name-details">
+                                    @Html.DisplayFor(model => model.CompanyName) -
+                                    <span class="company-location-details">@Html.DisplayFor(model => model.Address)</span>
+                                </p>
+                                <img src="~/images/@Html.DisplayFor(model => model.JobImage)" class="col-sm-4 col-sm-push-8 logo-company">
+                            </div>
+                        </div>
+                        <div class="row form-group mb-5">
+                            <div class="col-md-12 mb-3 mb-md-0 bg-white details">
+                                <h5>Job Type</h5>
+                                <p>@Html.DisplayFor(model => model.JobType)</p>
+                                <h5> Experience Needed</h5>
+                                <p>@Html.DisplayFor(model => model.EducationLevel)</p>
+                                <h5>Languages</h5>
+                                <p>@Html.DisplayFor(model => model.Languages)</p>
+                                <h5>Vacancies</h5>
+                                <p>@Html.DisplayFor(model => model.Vacancies)</p>
+                                <h5>Salary</h5>
+                                <p>@Html.DisplayFor(model => model.Salary)</p>
+                                <h5>Job Requirements</h5>
+                                @Html.Raw(HttpUtility.HtmlDecode(Html.DisplayFor(model => model.JobRequirements).ToString()))
+                                <br />
+                                @if ((string)Session["RoleName"] == "Publisher")
+                                {
+                                @Html.ActionLink("Edit", "EditJob","JobDetails", new { JobId = (int)Session["JobId"] }, new { @class = "btn btn-primary apply  py-2 px-5" })
+                                @*@Html.ActionLink(onclick = "ConfirmDelete(@it.JOBId)", new { @class = "btn btn-primary apply  py-2 px-5" })*@
+                                <a href="#"><i class="btn btn-primary apply  py-2 px-5" onclick="ConfirmDelete(@Model.JobId)">Delete</i></a>
+                                }
+                                else
+                                {
+                                @Html.ActionLink("Apply For Job", "ApplyJob1", new { JobId = (int)Session["JobId"] }, new { @class = "btn btn-primary apply  py-2 px-5" })
+                                }
+                                @*@Html.ActionLink("Apply For Job", "ApplyJob1", new { JobId = (int)Session["JobId"] }, new { @class = "btn btn-primary apply  py-2 px-5" })
+                            <button><a href="@Url.Action("SavePost", "Home",  new { JobId = (int)Session["JobId"] })"></a></button>*@
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#" class="close" data-dismiss="modal">&times;</a>
+                                        <h3 class="modal-title">Delete job</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Are you sure you want to Remove this Job?</h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                                        <a href="#" class="btn btn-success" onclick="Deletejob()">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                </form>
+            </div>
+
+                <div class="col-lg-4">
+                    <div class="p-4 mb-3 bg-white">
+                        <h3 class="h5 text-black mb-3">Contact Info</h3>
+                        <p class="mb-0 font-weight-bold">Address</p>
+                        <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                        <p class="mb-0 font-weight-bold">Phone</p>
+                        <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                        <p class="mb-0 font-weight-bold">Email Address</p>
+                        <p class="mb-0"><a href="#"><span class="__cf_email__" data-cfemail="671e081215020a060e0b2703080a060e094904080a">[email&#160;protected]</span></a></p>
+                    </div>
+
+                    <div class="p-4 mb-3 bg-white">
+                        <h3 class="h5 text-black mb-3">More Info</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur</p>
+                        <p><a href="#" class="btn btn-primary  py-2 px-4">Learn More</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--  start apply for jop -->
+    <!--  end apply for jop -->
+    <!-- loader -->
+    <input type="hidden" id="hiddenjobId" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        var ConfirmDelete = function (jobID) {
+            debugger;
+            $("#hiddenjobId").val(jobID);
+            $("#myModal").modal('show');
+        }
+        var Deletejob = function () {
+            var empId = $("#hiddenjobId").val();
+            $.ajax({
+                type: "POST",
+                url: "/JobDetails/DeleteJob",
+                data: { JobId: empId },
+                success: function (result) {
+                    $("#myModal").modal("hide");
+                    $("#row_" + empId).remove();
+
+                }
+            })
+        }
+    </script>
+    <script src="~/jobportal/js/jquery.min.js"></script>
+    <script src="~/jobportal/js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="~/jobportal/js/popper.min.js"></script>
+    <script src="~/jobportal/js/bootstrap.min.js"></script>
+    <script src="~/jobportal/js/jquery.easing.1.3.js"></script>
+    <script src="~/jobportal/js/jquery.waypoints.min.js"></script>
+    <script src="~/jobportal/js/jquery.stellar.min.js"></script>
+    <script src="~/jobportal/js/owl.carousel.min.js"></script>
+    <script src="~/jobportal/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/jobportal/js/aos.js"></script>
+    <script src="~/jobportal/js/jquery.animateNumber.min.js"></script>
+    <script src="~/jobportal/js/bootstrap-datepicker.js"></script>
+    <script src="~/jobportal/js/jquery.timepicker.min.js"></script>
+    <script src="~/jobportal/js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="~/jobportal/js/google-map.js"></script>
+    <script src="~/jobportal/js/main.js"></script>
+</body>
+</html>
+

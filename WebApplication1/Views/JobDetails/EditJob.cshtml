@@ -1,0 +1,151 @@
+﻿@model WebApplication1.Models.JobDetails
+
+<!DOCTYPE html>
+@*<html lang="en">*@
+<head>
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <link href="~/Content/StyleSheet2.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="~/jobportal/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/animate.css">
+    <link rel="stylesheet" href="~/jobportal/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/jobportal/css/aos.css">
+    <link rel="stylesheet" href="~/jobportal/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/jobportal/css/jquery.timepicker.css">
+    <link rel="stylesheet" href="~/jobportal/css/flaticon.css">
+    <link rel="stylesheet" href="~/jobportal/css/icomoon.css">
+    <link rel="stylesheet" href="~/jobportal/css/style.css">
+</head>
+<div>
+    @{
+        if (ViewBag.Result != null)
+        {
+            <script type="text/javascript">
+                    $(function () {
+                        alert("@ViewBag.Result")
+                    });
+            </script>
+            @*@ViewBag.Result;*@
+        }
+    }
+</div>
+<body>
+    <!-- END nav -->
+    <div class="hero-wrap js-fullheight" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
+                <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
+                    <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Post a Job</span></p>
+                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Post a Job</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+  @using (Html.BeginForm("Edit", "JobDetails"))
+{
+    @Html.ValidationSummary(true)
+    @Html.AntiForgeryToken()
+
+        <div class="ftco-section bg-light">
+        <div class="container">
+       <div class="row">
+
+                <div class="col-md-12 col-lg-8 mb-5 p-5 bg-white">
+             
+                    <form action="#" class="p-5 bg-white">
+
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" class="form-control" name="jobtitle" value="@Model.JobTitle" required />
+                            </div>
+                        </div>
+                        <div class="row form-group mb-5">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" class="form-control" name="companyname" value="@Model.CompanyName" required />
+                            </div>
+                        </div>
+                        <div class="row form-group mb-5">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="file" name="jobimage" id="jobimage" />
+                            </div>
+                        </div>
+                        <div class="row form-group mb-4">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" class="form-control" name="address" value="@Model.Address" required />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" class="form-control" name="jobtype" value="@Model.JobType" required />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" class="form-control" name="educationlevel" value="@Model.EducationLevel" required />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" class="form-control" name="languages" value="@Model.Languages" required />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" class="form-control" name="salary" value="@Model.Salary" required />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <input type="text" class="form-control" name="vacancies" value="@Model.Vacancies" required />
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12 mb-3 mb-md-0">
+                                <label class="font-weight-bold" for="fullname">Job Requirements</label>
+                                @Html.TextAreaFor(model => model.JobRequirements, new { @class = "form-control", @id = "JobRequirements" })
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input type="submit" value="Post" class="btn btn-primary  py-2 px-5">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+        
+                <div class="col-lg-4">
+                    <div class="p-4 mb-3 bg-white">
+                        <h3 class="h5 text-black mb-3">Contact Info</h3>
+                        <p class="mb-0 font-weight-bold">Address</p>
+                        <p class="mb-4">203 Fake St. Mountain View, San Francisco, California, USA</p>
+                        <p class="mb-0 font-weight-bold">Phone</p>
+                        <p class="mb-4"><a href="#">+1 232 3235 324</a></p>
+                        <p class="mb-0 font-weight-bold">Email Address</p>
+                        <p class="mb-0"><a href="#"><span class="__cf_email__" data-cfemail="671e081215020a060e0b2703080a060e094904080a">[email&#160;protected]</span></a></p>
+                    </div>
+
+                    <div class="p-4 mb-3 bg-white">
+                        <h3 class="h5 text-black mb-3">More Info</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ad iure porro mollitia architecto hic consequuntur. Distinctio nisi perferendis dolore, ipsa consectetur</p>
+                        <p><a href="#" class="btn btn-primary  py-2 px-4">Learn More</a></p>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+        </div>
+   
+    </div>
+    }
+    <script>
+        CKEDITOR.replace("JobRequirements");
+    </script>
+</body>  

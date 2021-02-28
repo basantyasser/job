@@ -1,0 +1,112 @@
+E:\c#\employment\WebApplication6\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+E:\c#\employment\WebApplication6\WebApplication1\bin\WebApplication1.dll.config
+E:\c#\employment\WebApplication6\WebApplication1\bin\WebApplication1.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\WebApplication1.pdb
+E:\c#\employment\WebApplication6\WebApplication1\bin\Antlr3.Runtime.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\EntityFramework.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\Newtonsoft.Json.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.Helpers.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.Mvc.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.Optimization.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.Razor.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.Razor.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\WebGrease.dll
+E:\c#\employment\WebApplication6\WebApplication1\bin\EntityFramework.xml
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.Helpers.xml
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.Mvc.xml
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.Optimization.xml
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.Razor.xml
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.xml
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+E:\c#\employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.Razor.xml
+E:\c#\employment\WebApplication6\WebApplication1\bin\Newtonsoft.Json.xml
+E:\c#\employment\WebApplication6\WebApplication1\bin\Antlr3.Runtime.pdb
+E:\c#\employment\WebApplication6\WebApplication1\obj\Debug\WebApplication1.dll
+E:\c#\employment\WebApplication6\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\obj\Debug\WebApplication1.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\WebApplication1.dll.config
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\WebApplication1.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\WebApplication1.pdb
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\Antlr3.Runtime.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\EntityFramework.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\Newtonsoft.Json.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.Helpers.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.Mvc.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.Optimization.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.Razor.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.Razor.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\WebGrease.dll
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\EntityFramework.xml
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.Helpers.xml
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.Mvc.xml
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.Optimization.xml
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.Razor.xml
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.xml
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\System.Web.WebPages.Razor.xml
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\Newtonsoft.Json.xml
+E:\c#\employment\New folder employment\WebApplication6\WebApplication1\bin\Antlr3.Runtime.pdb
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\WebApplication1.dll.config
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\WebApplication1.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\WebApplication1.pdb
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\Antlr3.Runtime.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\EntityFramework.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\Newtonsoft.Json.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.Helpers.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.Mvc.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.Optimization.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.Razor.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.WebPages.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.WebPages.Razor.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\WebGrease.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\EntityFramework.xml
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.Helpers.xml
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.Mvc.xml
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.Optimization.xml
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.Razor.xml
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.WebPages.xml
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\System.Web.WebPages.Razor.xml
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\Newtonsoft.Json.xml
+E:\c#\employment\my1\WebApplication6\WebApplication1\bin\Antlr3.Runtime.pdb
+E:\c#\employment\my1\WebApplication6\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+E:\c#\employment\my1\WebApplication6\WebApplication1\obj\Debug\WebApplication1.dll
+E:\c#\employment\my1\WebApplication6\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\basantProjects\MyJob-main\WebApplication1\bin\WebApplication1.dll.config
+E:\basantProjects\MyJob-main\WebApplication1\bin\WebApplication1.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\WebApplication1.pdb
+E:\basantProjects\MyJob-main\WebApplication1\bin\Antlr3.Runtime.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\EntityFramework.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\Microsoft.Web.Infrastructure.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\Newtonsoft.Json.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.Helpers.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.Mvc.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.Optimization.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.Razor.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.WebPages.Deployment.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.WebPages.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.WebPages.Razor.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\WebGrease.dll
+E:\basantProjects\MyJob-main\WebApplication1\bin\EntityFramework.xml
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.Helpers.xml
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.Mvc.xml
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.Optimization.xml
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.Razor.xml
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.WebPages.xml
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.WebPages.Deployment.xml
+E:\basantProjects\MyJob-main\WebApplication1\bin\System.Web.WebPages.Razor.xml
+E:\basantProjects\MyJob-main\WebApplication1\bin\Newtonsoft.Json.xml
+E:\basantProjects\MyJob-main\WebApplication1\bin\Antlr3.Runtime.pdb
+E:\basantProjects\MyJob-main\WebApplication1\obj\Debug\WebApplication1.dll
+E:\basantProjects\MyJob-main\WebApplication1\obj\Debug\WebApplication1.pdb
+E:\basantProjects\MyJob-main\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache

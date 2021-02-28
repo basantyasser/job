@@ -1,0 +1,102 @@
+﻿@model WebApplication1.Models.ApplyforJob
+           @{
+               Layout = null;
+           }
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ApplyJob</title>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript"></script>
+    <link href="~/Content/StyleSheet1.css" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="~/jobportal/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/animate.css">
+
+    <link rel="stylesheet" href="~/jobportal/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/jobportal/css/aos.css">
+    <link rel="stylesheet" href="~/jobportal/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/jobportal/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="~/jobportal/css/flaticon.css">
+    <link rel="stylesheet" href="~/jobportal/css/icomoon.css">
+    <link rel="stylesheet" href="~/jobportal/css/style.css">
+    <link href="~/jobportal/css/css/StyleSheet2.css" rel="stylesheet" />
+</head>
+<body>
+    <div>
+        @{
+            if (ViewBag.Result != null)
+            {
+                <script type="text/javascript">
+                    $(function () {
+                        alert("@ViewBag.Result")
+                    });
+                </script>
+            }
+        }
+    </div>
+                               @using (Html.BeginForm("ApplyJob1", "Home", FormMethod.Post,
+                                                               new { enctype = "multipart/form-data" }))
+                            {
+
+                                @Html.ValidationSummary(true)                           
+                                <!-- END nav -->
+                                <div class="apply-jop">
+                                    <div class="ftco-section ">
+                                        <div class="">
+                                            <div class="apply">
+                                <h3> @Html.DisplayFor(model => model.JobDetails.JobTitle)</h3>
+                                <label class="font-weight-bold" for="fullname">Upload File</label>
+                                <br />
+                                <input type="file" class="form-control" name="uploadfilee" required />
+                                <br />
+                                <label class="font-weight-bold" for="fullname">Do you want write a message ?</label>
+                                <br />
+                                <input type="text" class="form-control" name="Message" />
+                                <br />
+                                <input type="submit" value="Submit" class="btn btn-primary  py-2 px-5">
+                                <br />                              
+                        </div>
+                    </div>
+                 </div>
+             </div>  
+                         }
+                        @Scripts.Render("~/bundles/jquery")
+                        @Scripts.Render("~/bundles/jqueryval")
+
+
+
+                        <!-- loader -->
+
+                        <script src="~/jobportal/js/jquery.min.js"></script>
+                        <script src="~/jobportal/js/jquery-migrate-3.0.1.min.js"></script>
+                        <script src="~/jobportal/js/popper.min.js"></script>
+                        <script src="~/jobportal/js/bootstrap.min.js"></script>
+                        <script src="~/jobportal/js/jquery.easing.1.3.js"></script>
+                        <script src="~/jobportal/js/jquery.waypoints.min.js"></script>
+                        <script src="~/jobportal/js/jquery.stellar.min.js"></script>
+                        <script src="~/jobportal/js/owl.carousel.min.js"></script>
+                        <script src="~/jobportal/js/jquery.magnific-popup.min.js"></script>
+                        <script src="~/jobportal/js/aos.js"></script>
+                        <script src="~/jobportal/js/jquery.animateNumber.min.js"></script>
+                        <script src="~/jobportal/js/bootstrap-datepicker.js"></script>
+                        <script src="~/jobportal/js/jquery.timepicker.min.js"></script>
+                        <script src="~/jobportal/js/scrollax.min.js"></script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+                        <script src="~/jobportal/js/google-map.js"></script>
+                        <script src="~/jobportal/js/main.js"></script>
+
+                    </body>
+</html>
+
+

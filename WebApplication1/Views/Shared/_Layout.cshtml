@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Jos</title>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="~/jobportal/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/animate.css">
+
+    <link rel="stylesheet" href="~/jobportal/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/magnific-popup.css">
+    <link rel="stylesheet" href="~/jobportal/css/aos.css">
+    <link rel="stylesheet" href="~/jobportal/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/jobportal/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="~/jobportal/css/jquery.timepicker.css">
+
+    <link rel="stylesheet" href="~/jobportal/css/flaticon.css">
+    <link rel="stylesheet" href="~/jobportal/css/icomoon.css">
+    <link rel="stylesheet" href="~/jobportal/css/style.css">
+
+    <link rel="stylesheet" href="~/Content/StyleSheet1.css">
+    <link href="~/jobportal/css/css/StyleSheet2.css" rel="stylesheet" />
+    <link href="~/jobportal/css/css/all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MYJOB</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="@Url.Action("Index1", "Home")" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="@Url.Action("About", "Home")" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="@Url.Action("Contact1", "Home")" class="nav-link">Contact</a></li>
+                   <li class="nav-item cta cta-colored">
+                        @Html.Partial("~/Views/Shared/Partialview.cshtml")
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- END nav -->
+    
+
+
+    
+
+
+
+        @RenderBody()
+    
+
+
+<section class="ftco-section-parallax">
+    <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+                    <h2>Subcribe to our Newsletter</h2>
+                    <p>We offer jobs to people in a professional way and by displaying job details, the applicant can offer more than one job</p>
+                    <div class="row d-flex justify-content-center mt-4 mb-4">
+                        <div class="col-md-8">
+                            <form action="#" class="subscribe-form">
+                                <div class="form-group d-flex">
+                                    <input type="text" class="form-control" placeholder="Enter email address">
+                                    <input type="submit" value="Subscribe" class="submit px-3">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="ftco-footer ftco-bg-dark ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">About</h2>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                        <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                        <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Employers</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="~/Login/Register1" class="btu-success">Register</a>    </li>
+                        <li><a href="~/JobDetails/Create" class="btu-success">Post Job</a>    </li>            
+                        <li><a href="~/Home/About" class="btu-success">About</a>    </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4 ml-md-4">
+                    <h2 class="ftco-heading-2">Workers</h2>
+                    <ul class="list-unstyled">
+                        <li class="nav-item"><a href="@Url.Action("Contact1", "Home")" >Contact</a></li>
+                        <li class="nav-item active"><a href="@Url.Action("Index1", "Home")">Home</a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Have a Questions?</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><a href="#"><span class="icon icon-phone"></span><span class="text">01120039889</span></a></li>
+                            <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@gmail.com</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;
+                    <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" /><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
+
+<script src="~/jobportal/js/jquery.min.js"></script>
+<script src="~/jobportal/js/jquery-migrate-3.0.1.min.js"></script>
+<script src="~/jobportal/js/popper.min.js"></script>
+<script src="~/jobportal/js/bootstrap.min.js"></script>
+<script src="~/jobportal/js/jquery.easing.1.3.js"></script>
+<script src="~/jobportal/js/jquery.waypoints.min.js"></script>
+<script src="~/jobportal/js/jquery.stellar.min.js"></script>
+<script src="~/jobportal/js/owl.carousel.min.js"></script>
+<script src="~/jobportal/js/jquery.magnific-popup.min.js"></script>
+<script src="~/jobportal/js/aos.js"></script>
+<script src="~/jobportal/js/jquery.animateNumber.min.js"></script>
+<script src="~/jobportal/js/bootstrap-datepicker.js"></script>
+<script src="~/jobportal/js/jquery.timepicker.min.js"></script>
+<script src="~/jobportal/js/scrollax.min.js"></script>
+<script src="~/jobportal/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="~/jobportal/js/google-map.js"></script>
+<script src="~/jobportal/js/main.js"></script>
+<script src="~/Scripts/all.min.js"></script>
+<script>
+$("#loginButton").on("click", function () {
+    $("#loginView").toggle();
+});
+</script>
+</body>
+
+
+</html>

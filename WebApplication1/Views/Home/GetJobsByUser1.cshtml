@@ -1,0 +1,108 @@
+﻿@model IEnumerable< WebApplication1.Models.ApplyforJob>
+
+<body>
+    <div class="hero-wrap js-fullheight" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start" data-scrollax-parent="true">
+                <div class="col-md-8 ftco-animate text-center text-md-left mb-5" data-scrollax=" properties: { translateY: '70%' }">
+                    <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Applied Jobs</span></p>
+                    <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Applied Jobs</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    @if (Model.Count() > 0)
+    {
+        <div class="ftco-section bg-light">
+            <div class="container">
+                <table class="table">        
+                    <thead>
+                        <tr>
+                            <th>JOB Title</th>
+                            <th>Upload File</th>
+                            <th>Apply Date</th>
+                            <th style="padding-left: 177px"></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                           <tbody>
+               @foreach (var it in Model)
+               {
+                   <tr id="row_@it.ApplierId">
+               <td>
+                @it.JobDetails.JobTitle
+                </td>
+                  <td>
+                @it.uploadfile
+                </td>
+                <td>
+                @it.ApplyDate
+            </td>
+            <td>
+                <a href="#"><i class=" far fa-trash-alt" onclick="ConfirmDelete(@it.ApplierId)"></i></a>
+            </td>
+        </tr>
+           }                                                         
+          </tbody>
+             </table>
+                 </div>                     
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <a href="#" class="close" data-dismiss="modal">&times;</a>
+                                        <h3 class="modal-title">Delete job</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Are you sure you want to Remove this Job?</h4>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="#" class="btn btn-default" data-dismiss="modal">Cancel</a>
+                                        <a href="#" class="btn btn-success" onclick="DeleteEmployee()">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                  </div>   
+    }
+    else
+    {
+        @*<div align="center">
+            <label style="font-size:larger;color:red">No Results Found</label>
+
+        </div>*@
+        <section class="ftco-section bg-light">
+         <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+                         <div class="col-md-7 heading-section text-center ftco-animate">
+                            <h2 class="mb-4"><span>You Donot Apply</span>For Any Job</h2>
+                         </div>
+                     </div>
+                </div>
+            </section>
+    }      
+    <input type="hidden" id="hiddenEmployeeId" />
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>   
+    <script>
+        var ConfirmDelete = function (EmployeeId) {
+            debugger;
+            $("#hiddenEmployeeId").val(EmployeeId);
+            $("#myModal").modal('show');
+              }
+            var DeleteEmployee = function () {
+                var empId = $("#hiddenEmployeeId").val();
+                $.ajax({
+                    type: "POST",
+                    url: "/Home/DeleteJobByUser",
+                    data: { ApplierId: empId },
+                    success: function (result) {
+                        $("#myModal").modal("hide");
+                        $("#row_" + empId).remove();                   
+                    }
+                })
+            }  
+    </script>   
+</body>
+

@@ -1,0 +1,45 @@
+﻿body {
+}
+.hero-wrap, .img, .blog-img, .user-img {
+    /*background-image: url(../images/bg_1.jpg) ;
+    background-image: url(../images/bg_2.jpg);*/
+    /*background-image: url(../images/image_3.jpg);*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    /*background-position: center center;*/
+     animation: s 15s  infinite ;
+}
+ @keyframes s{
+    0%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))  , url(../images/bg_2.jpg)  ;
+         animation-delay: .5s;
+        background-position: center center;
+     }
+     25%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))  ,url(../images/code-cleanup.png)  ;
+       
+        animation-delay: .10s;
+      background-position: center center;
+     }
+      50%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))  ,  url(../images/bg_2.jpg) ;
+        animation-delay: .15s;
+           background-position: center center;
+      }
+      75%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))  , url(../images/1.jpg) ;
+        animation-delay: .20s;
+        background-position: center center;
+      }
+      100%{
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5))  ,  url(../images/2.jpg) ;
+        animation-delay: .25s;
+        background-position: center center;
+         animation-timing-function: cubic-bezier(0.7,0.7,0.7,0.7);
+       
+      }
+  }
+/*element.style {
+    background-image: url(../images/bg_2.jpg);
+    background-position: 50% -304px;
+}*/

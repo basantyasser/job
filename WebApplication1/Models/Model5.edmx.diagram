@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="647adca433324148a648dd9fedc4e4a3" Name="Diagram1">
+        <EntityTypeShape EntityType="JobsDbModel4.ApplyforJob" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsDbModel4.BrowseJobs" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsDbModel4.JobDetails" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsDbModel4.Profile" Width="1.5" PointX="0.75" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsDbModel4.RepliesSend" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsDbModel4.Roles" Width="1.5" PointX="1.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsDbModel4.SavedJob" Width="1.5" PointX="8.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JobsDbModel4.sysdiagrams" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <AssociationConnector Association="JobsDbModel4.FK_ApplyforJob_JobDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsDbModel4.FK_ApplyforJob_Profile" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsDbModel4.FK_JobDetails_BrowseJobs" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsDbModel4.FK_JobDetails_BrowseJobs1" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsDbModel4.FK_JobDetails_Profile" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsDbModel4.FK_SavedJob_JobDetails" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsDbModel4.FK_Profile_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="JobsDbModel4.FK_SavedJob_Profile" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

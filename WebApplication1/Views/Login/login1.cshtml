@@ -1,0 +1,34 @@
+﻿@model WebApplication1.Models.Profile
+       
+<head>
+    <link href="~/Content/Style.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script type="text/javascript"></script>
+</head>
+<div>
+    @{
+        if (ViewBag.Result != null)
+        {
+            <script type="text/javascript">
+                    $(function () {
+                        alert("@ViewBag.Result")
+                    });
+            </script>
+        }
+    }
+</div>
+<div class="form-horizontal"><br />
+    <div class="profile-content">
+                @using (Html.BeginForm())
+                {
+                         <h3>Log IN</h3>
+                        <input type="text" class="form-control" name="txtname" placeholder="User Name" required />
+                         <input type="password" id="fullname" class="form-control" placeholder="Password" name="txtpass" required>
+                                <button type="submit" value="Register">Login</button>
+                      <h6><a href="@Url.Action("Register1", "Login")" >Donot Have a Account?</a></h6>
+
+                }
+        </div>
+        </div>

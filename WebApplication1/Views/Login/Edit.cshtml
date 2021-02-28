@@ -1,0 +1,62 @@
+﻿@model WebApplication1.Models.Profile
+<div>
+    @{
+        if (ViewBag.Result != null)
+        {
+            <script type="text/javascript">
+                    $(function () {
+                        alert("@ViewBag.Result")
+                    });
+            </script>
+        }
+    }
+</div> 
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <br />
+          
+          <div class="profile-content">
+              <h3>EDIT PROFILE</h3>
+              @Html.HiddenFor(model => model.ProfileId)
+              <div >
+                  @Html.LabelFor(model => model.ProfileName, new { @class = "control-label col-md-2" })
+                  <input type="text" class="form-control" name="txtname" value="@Model.ProfileName" required />
+                      @Html.ValidationMessageFor(model => model.ProfileName)
+              </div>
+
+              <div >
+                  @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
+                  <input type="email" class="form-control" name="email" value="@Model.Email" required />
+                      @Html.ValidationMessageFor(model => model.Email)
+              </div>
+
+              <div >
+                 <div class="div-eye">
+                     @Html.LabelFor(model => model.Password, new { @class = "control-label col-md-2" })
+                     <input type="password" class="form-control" name="txtpass" value="@Model.Password " id="inputeye" required />
+                     @Html.ValidationMessageFor(model => model.Password)
+                     <span class="eye" onclick="functioneye()"><i class="fa fa-eye" aria-hidden="true"></i></span>
+                 </div>
+              </div>
+              <div >
+                  @Html.LabelFor(model => model.Address, new { @class = "control-label col-md-2" })
+                  <input type="text" class="form-control" name="address" value="@Model.Address" required />
+                      @Html.ValidationMessageFor(model => model.Address)
+              </div>
+
+              <div >
+                  @Html.LabelFor(model => model.RoleId, "RoleId", new { @class = "control-label col-md-2" })
+                  <div  >
+                      @Html.DropDownList("RoleId", null, "--Please select --", new { @class = "form-control", style = "width: 230px;" })  
+                      @Html.ValidationMessageFor(model => model.RoleId)
+                  </div>
+              </div>             
+                  <div >
+                      <button  type="submit" value="Save">Save</button>
+                  </div>        
+          </div>        
+        </div>
+    }

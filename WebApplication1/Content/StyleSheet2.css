@@ -1,0 +1,388 @@
+﻿{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+     .site-footer h3 {
+        color: #fff;
+    }
+.footer-links{
+    padding-left:0;
+    list-style:none;
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.subfooter {
+    /*background-color:#26272b;
+    color:red;
+    padding: 10px;
+    text-align:center;
+    margin-right: 889.5px;*/
+    margin:0;
+}
+.navbar-inverse {
+    background-color: #000000;
+    border-color: #080808;
+}
+
+.divider{
+    width:100%;
+    height:0.5px;
+    background-color:white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px;
+  
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:black;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  background-color:#29aafe
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+.social-icons a.facebook:hover
+{
+  background-color:#3b5998
+}
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.dribbble:hover
+{
+  background-color:#ea4c89
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+
+/*start home*/
+
+/*navbar*/
+.home{
+    /*background-color: blueviolet;
+    padding-bottom: 90px;*/
+    background-color: white;
+    height: 80px;
+}
+.home .opacit{
+   
+    /*opacity:0;*/
+}
+/*img{
+    position:absolute;
+    z-index:-1;
+    background-size:cover;
+    background-position:center center;
+}*/
+
+.home ul{
+    list-style:none; 
+     float:right;
+     padding-top:30px;
+}
+.home a{
+    text-decoration:none;
+    color:black;
+    opacity:0.7;
+}
+.home .post, .home .want{
+    border: 0px solid lightseagreen;
+    padding: 10px;
+    margin-top: 4px;
+    font-size: 15px;
+    cursor:pointer;
+    text-decoration:none;
+    transition:all 0.7s ease-in-out;
+    border-radius:10px;
+   font-weight:bold;
+   opacity:1;
+}
+.home .want{
+    margin-left: -20px;
+}
+.home .post{
+    color:lightseagreen;
+     background-color: #fff;
+}
+.home .post:hover{
+    background-color :lightseagreen;
+color: #fff;
+}
+.home .want{
+   background-color :lightseagreen;
+color: #fff;
+}
+.home .want:hover{
+   
+border:1px solid white;
+}
+
+.home.a1{
+    background: #5dd28e !important;
+}
+.home a:hover{
+    text-decoration:none;
+    /*color:white;
+    border: 1px solid white;
+      background-color:white;
+    color:lightseagreen;*/
+}
+.home ul li{
+       display:inline-block;
+    padding-right:20px;
+    font-size:16px;
+    transition:all 0.5s ease-in-out;
+    cursor:pointer;
+}
+
+.home ul li:hover{
+    /*transform:scale(1.1);*/
+  
+}
+.paddingtop{
+    padding-top:200px;
+}
+.navbar-default .navbar-brand {
+       color: black;
+    font-size: 25px;
+    line-height: 50px;
+    margin: 0px 70px;
+    font-size: 3rem;
+}
+.content-one{
+   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/login4.jpeg);
+    background-size: cover;
+    background-position: top center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.p1{
+    padding-top:100px;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: white;
+}
+.p2{
+    padding-top:20px;
+     font-size: 50px;
+     color:white;
+     line-height: 1;
+     
+}
+.p2 p{
+    font-weight:0
+}
+/*end nav bar*/
+/*start login*/
+/* Full-width input fields */
+.in1 {
+    width:50%;
+    outline:none;
+    padding:10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    color: #666;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition:all 0.5s ease-in-out;
+    margin-bottom:10px
+}
+
+.modal-content .container{
+
+margin-top:40px
+}
+
+input:hover,select:hover{
+transform:scale(1.01);
+border: 1px solid #666;
+
+}
+/* Set a style for all buttons */
+#btnlogin {
+  background-color: lightseagreen;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  border-radius: 10px;
+}
+/* Extra styles for the cancel button */
+
+/* Center the image and position the close button */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  padding-top: 60px;
+  padding-bottom:40px;
+  
+}
+.modal p{
+background-color: #fefefe;
+    margin: 0;
+    margin-bottom: 0;
+    padding-top: -10px;
+    text-align: center;
+    /* width: 10%; */
+    font-size: 40px;
+    /* margin-left: 400px; */
+    border-radius: 10px;
+    padding-bottom: 10px;
+   
+}
+
+/* Modal Content/Box */
+.modal-content {
+
+  background-color: #fefefe;
+ /* margin: 5% auto 15% auto;  5% from the top, 15% from the bottom and centered */
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:0;
+    margin-bottom:15%;
+  border: 1px solid #888;
+  width: 40%; 
+   padding-bottom:40px;
+    
+      border-radius: 10px;
+      position:relative;
+      text-align:center;
+}
+.close{
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+
+}
+
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+/*end login*/
+
+/* change in bootstrap*/
+.navbar-fixed-top, .navbar-fixed-bottom {
+    
+    border-width: 0 0 0px;
+}
+
+/*****************************update style of home**************************/
+
+.ftco-navbar-light .navbar-nav > .nav-item.cta.cta-colored .btu-success{
+    color:black;
+    background-color:white;
+    border:none;
+}
+/*********************parts-types****************************************/
+.parts-types .type1{
+
+}
+.parts-types .type2{
+
+}
+.parts-types .type3{
+
+}
+
+
+

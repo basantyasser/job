@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JobsDbModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ApplyforJob">
+    <Key>
+      <PropertyRef Name="ApplierId" />
+    </Key>
+    <Property Name="ApplierId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" />
+    <Property Name="ApplyDate" Type="datetime" />
+    <Property Name="uploadfile" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="JobId" Type="int" />
+    <Property Name="ProfileId" Type="int" />
+  </EntityType>
+  <EntityType Name="BrowseJobs">
+    <Key>
+      <PropertyRef Name="BrowseId" />
+    </Key>
+    <Property Name="BrowseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BrowseName" Type="nvarchar(max)" />
+    <Property Name="description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="JobDetails">
+    <Key>
+      <PropertyRef Name="JobId" />
+    </Key>
+    <Property Name="JobId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobTitle" Type="nvarchar(max)" />
+    <Property Name="JobContent" Type="nvarchar(max)" />
+    <Property Name="JobImage" Type="nvarchar(max)" />
+    <Property Name="ProfileId" Type="int" />
+    <Property Name="BrowseId" Type="int" />
+    <Property Name="JobType" Type="nvarchar(max)" />
+    <Property Name="Languages" Type="nvarchar(max)" />
+    <Property Name="Salary" Type="nvarchar(max)" />
+    <Property Name="Vacancies" Type="nvarchar(max)" />
+    <Property Name="EducationLevel" Type="nvarchar(max)" />
+    <Property Name="JobRequirements" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="nvarchar(max)" />
+    <Property Name="Address" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Profile">
+    <Key>
+      <PropertyRef Name="ProfileId" />
+    </Key>
+    <Property Name="ProfileId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProfileName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Confirm Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RoleId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RepliesSend">
+    <Key>
+      <PropertyRef Name="SendId" />
+    </Key>
+    <Property Name="SendId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Object" Type="nvarchar(max)" />
+    <Property Name="Message" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_ApplyforJob_JobDetails">
+    <End Role="JobDetails" Type="Self.JobDetails" Multiplicity="0..1" />
+    <End Role="ApplyforJob" Type="Self.ApplyforJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobDetails">
+        <PropertyRef Name="JobId" />
+      </Principal>
+      <Dependent Role="ApplyforJob">
+        <PropertyRef Name="JobId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ApplyforJob_Profile">
+    <End Role="Profile" Type="Self.Profile" Multiplicity="0..1" />
+    <End Role="ApplyforJob" Type="Self.ApplyforJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profile">
+        <PropertyRef Name="ProfileId" />
+      </Principal>
+      <Dependent Role="ApplyforJob">
+        <PropertyRef Name="ProfileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobDetails_BrowseJobs">
+    <End Role="BrowseJobs" Type="Self.BrowseJobs" Multiplicity="0..1" />
+    <End Role="JobDetails" Type="Self.JobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BrowseJobs">
+        <PropertyRef Name="BrowseId" />
+      </Principal>
+      <Dependent Role="JobDetails">
+        <PropertyRef Name="BrowseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobDetails_BrowseJobs1">
+    <End Role="BrowseJobs" Type="Self.BrowseJobs" Multiplicity="0..1" />
+    <End Role="JobDetails" Type="Self.JobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BrowseJobs">
+        <PropertyRef Name="BrowseId" />
+      </Principal>
+      <Dependent Role="JobDetails">
+        <PropertyRef Name="BrowseId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_JobDetails_Profile">
+    <End Role="Profile" Type="Self.Profile" Multiplicity="0..1" />
+    <End Role="JobDetails" Type="Self.JobDetails" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profile">
+        <PropertyRef Name="ProfileId" />
+      </Principal>
+      <Dependent Role="JobDetails">
+        <PropertyRef Name="ProfileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Profile_Roles">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+    <End Role="Profile" Type="Self.Profile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="Profile">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JobsDbModel1StoreContainer">
+    <EntitySet Name="ApplyforJob" EntityType="Self.ApplyforJob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BrowseJobs" EntityType="Self.BrowseJobs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobDetails" EntityType="Self.JobDetails" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Profile" EntityType="Self.Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RepliesSend" EntityType="Self.RepliesSend" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_ApplyforJob_JobDetails" Association="Self.FK_ApplyforJob_JobDetails">
+      <End Role="JobDetails" EntitySet="JobDetails" />
+      <End Role="ApplyforJob" EntitySet="ApplyforJob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ApplyforJob_Profile" Association="Self.FK_ApplyforJob_Profile">
+      <End Role="Profile" EntitySet="Profile" />
+      <End Role="ApplyforJob" EntitySet="ApplyforJob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobDetails_BrowseJobs" Association="Self.FK_JobDetails_BrowseJobs">
+      <End Role="BrowseJobs" EntitySet="BrowseJobs" />
+      <End Role="JobDetails" EntitySet="JobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobDetails_BrowseJobs1" Association="Self.FK_JobDetails_BrowseJobs1">
+      <End Role="BrowseJobs" EntitySet="BrowseJobs" />
+      <End Role="JobDetails" EntitySet="JobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_JobDetails_Profile" Association="Self.FK_JobDetails_Profile">
+      <End Role="Profile" EntitySet="Profile" />
+      <End Role="JobDetails" EntitySet="JobDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Profile_Roles" Association="Self.FK_Profile_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Profile" EntitySet="Profile" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

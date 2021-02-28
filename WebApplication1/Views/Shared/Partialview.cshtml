@@ -1,0 +1,44 @@
+﻿
+@using WebApplication1.Models;
+@if(HttpContext.Current.Session["ProfileId"] != null && HttpContext.Current.Session["ProfileId"].ToString() != "")
+{
+    using (Html.BeginForm("LogOff", "Login", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right " }))
+    {
+        @Html.AntiForgeryToken()
+    
+    <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                    @Session["UserName"] 
+                </button>
+                <ul class="dropdown-menu">
+                    @if ((string)Session["RoleName"] == "Publisher")
+                    {
+                        <li><a href="~/Home/GetJobsByPublisher1" class="btu-success">published Jobs </a></li>
+                        <li><a href="~/JobDetails/Create" class="btu-success">Post Job</a>    </li>
+                    }
+                    else
+                    {
+                        <li><a href="~/Home/GetJobsByUser1" class="btu-success"> Applied Jobs </a></li>
+                    }
+                    <li><a href="@Url.Action("Edit", "Login", new { id = Session["ProfileId"] })" class="btu-success">Edit Profile</a></li>
+                    <li>
+
+                        <a href="javascript:document.getElementById('logoutForm').submit()" class="btu-success">
+                    Log oFF
+                    </a>
+                   </li>
+                </ul>
+            </li>
+    </ul>
+    }
+}
+else
+{
+                        <li class="nav-item "><a href="@Url.Action("Register1", "Login")" class="nav-link">REGISTER</a></li>
+                        <li class="nav-item "><a href="@Url.Action("login1", "Login")" class="nav-link">LOGIN</a></li>
+    
+}
+
+
+

@@ -1,0 +1,1276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AE33F708-D1FC-4CBA-A49A-7652C198556E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication1</RootNamespace>
+    <AssemblyName>WebApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\.vagrant\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobDetailsController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ApplyforJob.cs">
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Class1.cs" />
+    <Compile Include="Models\JobDetails.cs">
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model5.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model5.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model5.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Profile.cs">
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RepliesSend.cs">
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles.cs">
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Model5.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="viewmodel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\StyleSheet1.css" />
+    <Content Include="Content\StyleSheet2.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="images\5.jpg" />
+    <Content Include="images\7.jpg" />
+    <Content Include="images\basic.jpg" />
+    <Content Include="images\bg_1.jpg" />
+    <Content Include="images\bg_2.jpg" />
+    <Content Include="images\code-cleanup.png" />
+    <Content Include="images\image_3.jpg" />
+    <Content Include="images\office.jpg" />
+    <Content Include="jobportal\bg_2.jpg" />
+    <Content Include="jobportal\about.html" />
+    <Content Include="jobportal\blog-single.html" />
+    <Content Include="jobportal\blog.html" />
+    <Content Include="jobportal\contact.html" />
+    <Content Include="jobportal\css\ajax-loader.gif" />
+    <Content Include="jobportal\css\animate.css" />
+    <Content Include="jobportal\css\aos.css" />
+    <Content Include="jobportal\css\bootstrap-datepicker.css" />
+    <Content Include="jobportal\css\bootstrap.min.css" />
+    <Content Include="jobportal\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="jobportal\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="jobportal\css\css\all.min.css" />
+    <Content Include="jobportal\css\css\bootstrap-reboot.css" />
+    <Content Include="jobportal\css\css\mixins\_text-hide.css" />
+    <Content Include="jobportal\css\css\StyleSheet2.css" />
+    <Content Include="jobportal\css\flaticon.css" />
+    <Content Include="jobportal\css\icomoon.css" />
+    <Content Include="jobportal\css\ionicons.min.css" />
+    <Content Include="jobportal\css\jquery.timepicker.css" />
+    <Content Include="jobportal\css\magnific-popup.css" />
+    <Content Include="jobportal\css\open-iconic-bootstrap.min.css" />
+    <Content Include="jobportal\css\owl.carousel.min.css" />
+    <Content Include="jobportal\css\owl.theme.default.min.css" />
+    <Content Include="jobportal\css\style.css" />
+    <Content Include="jobportal\fonts\flaticon\backup.txt" />
+    <Content Include="jobportal\fonts\flaticon\font\flaticon.css" />
+    <Content Include="jobportal\fonts\flaticon\font\flaticon.html" />
+    <Content Include="jobportal\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\catalog\README.txt" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\forum\forum.py" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\forum\forum.sql" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\forum\forumdb.py" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\forum\solution\forum.py" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\forum\solution\forumdb_initial.py" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\forum\solution\forumdb_solved.py" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\forum\solution\forumdb_stepone.py" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\forum\solution\forumdb_steptwo.py" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\tournament\tournament.py" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\tournament\tournament.sql" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\tournament\tournament_test.py" />
+    <Content Include="jobportal\images\about.jpg" />
+    <Content Include="jobportal\images\bg_1.jpg" />
+    <Content Include="jobportal\images\bg_2.jpg" />
+    <Content Include="jobportal\images\image_1.jpg" />
+    <Content Include="jobportal\images\image_2.jpg" />
+    <Content Include="jobportal\images\image_3.jpg" />
+    <Content Include="jobportal\images\image_4.jpg" />
+    <Content Include="jobportal\images\image_5.jpg" />
+    <Content Include="jobportal\images\image_6.jpg" />
+    <Content Include="jobportal\images\image_7.jpg" />
+    <Content Include="jobportal\images\image_8.jpg" />
+    <Content Include="jobportal\images\loc.png" />
+    <Content Include="jobportal\images\person_1.jpg" />
+    <Content Include="jobportal\images\person_2.jpg" />
+    <Content Include="jobportal\images\person_3.jpg" />
+    <Content Include="jobportal\images\person_4.jpg" />
+    <Content Include="jobportal\index.html" />
+    <Content Include="jobportal\job-post.html" />
+    <Content Include="jobportal\jobportal\about.html" />
+    <Content Include="jobportal\jobportal\blog-single.html" />
+    <Content Include="jobportal\jobportal\blog.html" />
+    <Content Include="jobportal\jobportal\contact.html" />
+    <Content Include="jobportal\jobportal\css\ajax-loader.gif" />
+    <Content Include="jobportal\jobportal\css\animate.css" />
+    <Content Include="jobportal\jobportal\css\aos.css" />
+    <Content Include="jobportal\jobportal\css\bootstrap-datepicker.css" />
+    <Content Include="jobportal\jobportal\css\bootstrap.min.css" />
+    <Content Include="jobportal\jobportal\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="jobportal\jobportal\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="jobportal\jobportal\css\css\bootstrap-reboot.css" />
+    <Content Include="jobportal\jobportal\css\css\mixins\_text-hide.css" />
+    <Content Include="jobportal\jobportal\css\flaticon.css" />
+    <Content Include="jobportal\jobportal\css\icomoon.css" />
+    <Content Include="jobportal\jobportal\css\ionicons.min.css" />
+    <Content Include="jobportal\jobportal\css\jquery.timepicker.css" />
+    <Content Include="jobportal\jobportal\css\magnific-popup.css" />
+    <Content Include="jobportal\jobportal\css\open-iconic-bootstrap.min.css" />
+    <Content Include="jobportal\jobportal\css\owl.carousel.min.css" />
+    <Content Include="jobportal\jobportal\css\owl.theme.default.min.css" />
+    <Content Include="jobportal\jobportal\css\style.css" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\backup.txt" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\font\flaticon.css" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\font\flaticon.html" />
+    <Content Include="jobportal\jobportal\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="jobportal\jobportal\images\about.jpg" />
+    <Content Include="jobportal\jobportal\images\bg_1.jpg" />
+    <Content Include="jobportal\jobportal\images\bg_2.jpg" />
+    <Content Include="jobportal\jobportal\images\image_1.jpg" />
+    <Content Include="jobportal\jobportal\images\image_2.jpg" />
+    <Content Include="jobportal\jobportal\images\image_3.jpg" />
+    <Content Include="jobportal\jobportal\images\image_4.jpg" />
+    <Content Include="jobportal\jobportal\images\image_5.jpg" />
+    <Content Include="jobportal\jobportal\images\image_6.jpg" />
+    <Content Include="jobportal\jobportal\images\image_7.jpg" />
+    <Content Include="jobportal\jobportal\images\image_8.jpg" />
+    <Content Include="jobportal\jobportal\images\loc.png" />
+    <Content Include="jobportal\jobportal\images\person_1.jpg" />
+    <Content Include="jobportal\jobportal\images\person_2.jpg" />
+    <Content Include="jobportal\jobportal\images\person_3.jpg" />
+    <Content Include="jobportal\jobportal\images\person_4.jpg" />
+    <Content Include="jobportal\jobportal\index.html" />
+    <Content Include="jobportal\jobportal\job-post.html" />
+    <Content Include="jobportal\jobportal\js\aos.js" />
+    <Content Include="jobportal\jobportal\js\bootstrap-datepicker.js" />
+    <Content Include="jobportal\jobportal\js\bootstrap.min.js" />
+    <Content Include="jobportal\jobportal\js\google-map.js" />
+    <Content Include="jobportal\jobportal\js\jquery-3.2.1.min.js" />
+    <Content Include="jobportal\jobportal\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="jobportal\jobportal\js\jquery.animateNumber.min.js" />
+    <Content Include="jobportal\jobportal\js\jquery.easing.1.3.js" />
+    <Content Include="jobportal\jobportal\js\jquery.magnific-popup.min.js" />
+    <Content Include="jobportal\jobportal\js\jquery.min.js" />
+    <Content Include="jobportal\jobportal\js\jquery.stellar.min.js" />
+    <Content Include="jobportal\jobportal\js\jquery.waypoints.min.js" />
+    <Content Include="jobportal\jobportal\js\main.js" />
+    <Content Include="jobportal\jobportal\js\owl.carousel.min.js" />
+    <Content Include="jobportal\jobportal\js\popper.min.js" />
+    <Content Include="jobportal\jobportal\js\range.js" />
+    <Content Include="jobportal\jobportal\js\scrollax.min.js" />
+    <Content Include="jobportal\jobportal\new-post.html" />
+    <Content Include="jobportal\js\aos.js" />
+    <Content Include="jobportal\js\bootstrap-datepicker.js" />
+    <Content Include="jobportal\js\bootstrap.min.js" />
+    <Content Include="jobportal\js\google-map.js" />
+    <Content Include="jobportal\js\jquery-3.2.1.min.js" />
+    <Content Include="jobportal\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="jobportal\js\jquery.animateNumber.min.js" />
+    <Content Include="jobportal\js\jquery.easing.1.3.js" />
+    <Content Include="jobportal\js\jquery.magnific-popup.min.js" />
+    <Content Include="jobportal\js\jquery.min.js" />
+    <Content Include="jobportal\js\jquery.stellar.min.js" />
+    <Content Include="jobportal\js\jquery.waypoints.min.js" />
+    <Content Include="jobportal\js\main.js" />
+    <Content Include="jobportal\js\owl.carousel.min.js" />
+    <Content Include="jobportal\js\popper.min.js" />
+    <Content Include="jobportal\js\range.js" />
+    <Content Include="jobportal\js\scrollax.min.js" />
+    <Content Include="jobportal\new-post.html" />
+    <Content Include="jobportal\__MACOSX\jobportal\._about.html" />
+    <Content Include="jobportal\__MACOSX\jobportal\._blog-single.html" />
+    <Content Include="jobportal\__MACOSX\jobportal\._blog.html" />
+    <Content Include="jobportal\__MACOSX\jobportal\._contact.html" />
+    <Content Include="jobportal\__MACOSX\jobportal\._index.html" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._ajax-loader.gif" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._animate.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._aos.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._bootstrap-datepicker.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._bootstrap.min.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._flaticon.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._icomoon.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._ionicons.min.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._jquery.timepicker.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._magnific-popup.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._open-iconic-bootstrap.min.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._owl.carousel.min.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._owl.theme.default.min.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._style.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\css\._bootstrap-reboot.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\css\mixins\.__text-hide.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\._backup.txt" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\font\._flaticon.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\font\._flaticon.html" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\css\._ionicons.min.css" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._about.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._bg_1.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._bg_2.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._image_1.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._image_2.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._image_3.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._image_4.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._image_5.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._image_6.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._image_7.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._image_8.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._loc.png" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._person_1.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._person_2.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._person_3.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._person_4.jpg" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._aos.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._bootstrap-datepicker.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._bootstrap.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._google-map.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._jquery-3.2.1.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._jquery-migrate-3.0.1.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._jquery.animateNumber.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._jquery.easing.1.3.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._jquery.magnific-popup.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._jquery.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._jquery.stellar.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._jquery.waypoints.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._main.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._owl.carousel.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._popper.min.js" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._scrollax.min.js" />
+    <Content Include="Scripts\all.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="jobportal\.DS_Store" />
+    <Content Include="jobportal\css\.DS_Store" />
+    <Content Include="jobportal\css\bootstrap\.DS_Store" />
+    <Content Include="jobportal\css\css\.DS_Store" />
+    <Content Include="jobportal\fonts\.DS_Store" />
+    <Content Include="jobportal\fonts\flaticon\.DS_Store" />
+    <Content Include="jobportal\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="jobportal\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="jobportal\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="jobportal\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="jobportal\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="jobportal\fonts\flaticon\license\license.pdf" />
+    <Content Include="jobportal\fonts\icomoon\icomoon.eot" />
+    <Content Include="jobportal\fonts\icomoon\icomoon.svg" />
+    <Content Include="jobportal\fonts\icomoon\icomoon.ttf" />
+    <Content Include="jobportal\fonts\icomoon\icomoon.woff" />
+    <Content Include="jobportal\fonts\ionicons\css\_ionicons.scss" />
+    <Content Include="jobportal\fonts\ionicons\fonts\.DS_Store" />
+    <Content Include="jobportal\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="jobportal\fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="jobportal\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="jobportal\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="jobportal\fonts\ionicons\fonts\ionicons.woff2" />
+    <Content Include="jobportal\fonts\open-iconic\open-iconic.eot" />
+    <Content Include="jobportal\fonts\open-iconic\open-iconic.otf" />
+    <Content Include="jobportal\fonts\open-iconic\open-iconic.svg" />
+    <Content Include="jobportal\fonts\open-iconic\open-iconic.ttf" />
+    <Content Include="jobportal\fonts\open-iconic\open-iconic.woff" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\CODEOWNERS" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\README.md" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\.gitignore" />
+    <Content Include="jobportal\css\fullstack-nanodegree-vm-master\vagrant\Vagrantfile" />
+    <Content Include="jobportal\images\.DS_Store" />
+    <Content Include="jobportal\jobportal\.DS_Store" />
+    <Content Include="jobportal\jobportal\css\.DS_Store" />
+    <Content Include="jobportal\jobportal\css\bootstrap\.DS_Store" />
+    <Content Include="jobportal\jobportal\css\css\.DS_Store" />
+    <Content Include="jobportal\jobportal\fonts\.DS_Store" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\.DS_Store" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="jobportal\jobportal\fonts\flaticon\license\license.pdf" />
+    <Content Include="jobportal\jobportal\fonts\icomoon\icomoon.eot" />
+    <Content Include="jobportal\jobportal\fonts\icomoon\icomoon.svg" />
+    <Content Include="jobportal\jobportal\fonts\icomoon\icomoon.ttf" />
+    <Content Include="jobportal\jobportal\fonts\icomoon\icomoon.woff" />
+    <Content Include="jobportal\jobportal\fonts\ionicons\css\_ionicons.scss" />
+    <Content Include="jobportal\jobportal\fonts\ionicons\fonts\.DS_Store" />
+    <Content Include="jobportal\jobportal\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="jobportal\jobportal\fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="jobportal\jobportal\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="jobportal\jobportal\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="jobportal\jobportal\fonts\ionicons\fonts\ionicons.woff2" />
+    <Content Include="jobportal\jobportal\fonts\open-iconic\open-iconic.eot" />
+    <Content Include="jobportal\jobportal\fonts\open-iconic\open-iconic.otf" />
+    <Content Include="jobportal\jobportal\fonts\open-iconic\open-iconic.svg" />
+    <Content Include="jobportal\jobportal\fonts\open-iconic\open-iconic.ttf" />
+    <Content Include="jobportal\jobportal\fonts\open-iconic\open-iconic.woff" />
+    <Content Include="jobportal\jobportal\images\.DS_Store" />
+    <Content Include="jobportal\jobportal\js\.DS_Store" />
+    <Content Include="jobportal\jobportal\prepros-6.config" />
+    <Content Include="jobportal\jobportal\scss\.DS_Store" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\bootstrap.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_alert.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_badge.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_button-group.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_buttons.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_card.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_carousel.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_close.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_code.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_dropdown.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_forms.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_functions.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_grid.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_images.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_input-group.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_list-group.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_media.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_mixins.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_modal.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_nav.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_navbar.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_pagination.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_popover.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_print.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_progress.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_reboot.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_root.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_tables.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_tooltip.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_transitions.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_type.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_utilities.scss" />
+    <Content Include="jobportal\jobportal\scss\bootstrap\_variables.scss" />
+    <Content Include="jobportal\jobportal\scss\style.scss" />
+    <Content Include="jobportal\js\.DS_Store" />
+    <Content Include="jobportal\prepros-6.config" />
+    <Content Include="jobportal\scss\.DS_Store" />
+    <Content Include="jobportal\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="jobportal\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="jobportal\scss\bootstrap\bootstrap.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="jobportal\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="jobportal\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="jobportal\scss\bootstrap\_alert.scss" />
+    <Content Include="jobportal\scss\bootstrap\_badge.scss" />
+    <Content Include="jobportal\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="jobportal\scss\bootstrap\_button-group.scss" />
+    <Content Include="jobportal\scss\bootstrap\_buttons.scss" />
+    <Content Include="jobportal\scss\bootstrap\_card.scss" />
+    <Content Include="jobportal\scss\bootstrap\_carousel.scss" />
+    <Content Include="jobportal\scss\bootstrap\_close.scss" />
+    <Content Include="jobportal\scss\bootstrap\_code.scss" />
+    <Content Include="jobportal\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="jobportal\scss\bootstrap\_dropdown.scss" />
+    <Content Include="jobportal\scss\bootstrap\_forms.scss" />
+    <Content Include="jobportal\scss\bootstrap\_functions.scss" />
+    <Content Include="jobportal\scss\bootstrap\_grid.scss" />
+    <Content Include="jobportal\scss\bootstrap\_images.scss" />
+    <Content Include="jobportal\scss\bootstrap\_input-group.scss" />
+    <Content Include="jobportal\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="jobportal\scss\bootstrap\_list-group.scss" />
+    <Content Include="jobportal\scss\bootstrap\_media.scss" />
+    <Content Include="jobportal\scss\bootstrap\_mixins.scss" />
+    <Content Include="jobportal\scss\bootstrap\_modal.scss" />
+    <Content Include="jobportal\scss\bootstrap\_nav.scss" />
+    <Content Include="jobportal\scss\bootstrap\_navbar.scss" />
+    <Content Include="jobportal\scss\bootstrap\_pagination.scss" />
+    <Content Include="jobportal\scss\bootstrap\_popover.scss" />
+    <Content Include="jobportal\scss\bootstrap\_print.scss" />
+    <Content Include="jobportal\scss\bootstrap\_progress.scss" />
+    <Content Include="jobportal\scss\bootstrap\_reboot.scss" />
+    <Content Include="jobportal\scss\bootstrap\_root.scss" />
+    <Content Include="jobportal\scss\bootstrap\_tables.scss" />
+    <Content Include="jobportal\scss\bootstrap\_tooltip.scss" />
+    <Content Include="jobportal\scss\bootstrap\_transitions.scss" />
+    <Content Include="jobportal\scss\bootstrap\_type.scss" />
+    <Content Include="jobportal\scss\bootstrap\_utilities.scss" />
+    <Content Include="jobportal\scss\bootstrap\_variables.scss" />
+    <Content Include="jobportal\scss\style.scss" />
+    <Content Include="jobportal\__MACOSX\._jobportal" />
+    <Content Include="jobportal\__MACOSX\jobportal\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\._css" />
+    <Content Include="jobportal\__MACOSX\jobportal\._fonts" />
+    <Content Include="jobportal\__MACOSX\jobportal\._images" />
+    <Content Include="jobportal\__MACOSX\jobportal\._js" />
+    <Content Include="jobportal\__MACOSX\jobportal\._scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\._css" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\bootstrap\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\css\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\css\css\._mixins" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\._flaticon" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\._icomoon" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\._ionicons" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\._open-iconic" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\._font" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\._license" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\font\._Flaticon.eot" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\font\._Flaticon.svg" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\font\._Flaticon.ttf" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\font\._Flaticon.woff" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\font\.__flaticon.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\flaticon\license\._license.pdf" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\icomoon\._icomoon.eot" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\icomoon\._icomoon.svg" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\icomoon\._icomoon.ttf" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\icomoon\._icomoon.woff" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\._css" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\._fonts" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\css\.__ionicons.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\fonts\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\fonts\._ionicons.eot" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\fonts\._ionicons.svg" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\fonts\._ionicons.ttf" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\fonts\._ionicons.woff" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\ionicons\fonts\._ionicons.woff2" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\open-iconic\._open-iconic.eot" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\open-iconic\._open-iconic.otf" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\open-iconic\._open-iconic.svg" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\open-iconic\._open-iconic.ttf" />
+    <Content Include="jobportal\__MACOSX\jobportal\fonts\open-iconic\._open-iconic.woff" />
+    <Content Include="jobportal\__MACOSX\jobportal\images\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\js\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\._.DS_Store" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\._bootstrap" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\._style.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\._bootstrap-grid.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\._bootstrap-reboot.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\._bootstrap.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\._mixins" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\._utilities" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__alert.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__badge.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__breadcrumb.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__button-group.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__buttons.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__card.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__carousel.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__close.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__code.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__custom-forms.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__dropdown.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__forms.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__functions.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__grid.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__images.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__input-group.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__jumbotron.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__list-group.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__media.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__mixins.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__modal.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__nav.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__navbar.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__pagination.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__popover.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__print.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__progress.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__reboot.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__root.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__tables.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__tooltip.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__transitions.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__type.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__utilities.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\.__variables.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__alert.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__background-variant.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__badge.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__border-radius.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__box-shadow.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__breakpoints.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__buttons.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__caret.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__clearfix.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__float.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__forms.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__gradients.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__grid-framework.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__grid.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__hover.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__image.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__list-group.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__lists.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__nav-divider.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__pagination.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__reset-text.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__resize.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__screen-reader.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__size.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__table-row.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__text-emphasis.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__text-hide.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__text-truncate.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__transition.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\mixins\.__visibility.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__align.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__background.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__borders.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__clearfix.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__display.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__embed.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__flex.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__float.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__position.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__screenreaders.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__shadows.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__sizing.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__spacing.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__text.scss" />
+    <Content Include="jobportal\__MACOSX\jobportal\scss\bootstrap\utilities\.__visibility.scss" />
+    <Content Include="Scripts\ckeditor\CHANGES.md" />
+    <Content Include="Scripts\ckeditor\LICENSE.md" />
+    <Content Include="Scripts\ckeditor\plugins\copyformatting\cursors\cursor-disabled.svg" />
+    <Content Include="Scripts\ckeditor\plugins\copyformatting\cursors\cursor.svg" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\CHANGELOG.md" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\README.md" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\README.md" />
+    <Content Include="Scripts\ckeditor\README.md" />
+    <Content Include="Scripts\ckeditor\samples\img\logo.svg" />
+    <Content Include="Scripts\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.fla" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\font\config.json" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\font\fontello.eot" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\font\fontello.svg" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\font\fontello.ttf" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\readme.md" />
+    <EntityDeploy Include="Models\Model5.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model5.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model5.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model5.edmx</DependentUpon>
+      <LastGenOutput>Model5.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model5.edmx.diagram">
+      <DependentUpon>Model5.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model5.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model5.edmx</DependentUpon>
+      <LastGenOutput>Model5.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\ckeditor\adapters\jquery.js" />
+    <Content Include="Scripts\ckeditor\build-config.js" />
+    <Content Include="Scripts\ckeditor\ckeditor.js" />
+    <Content Include="Scripts\ckeditor\config.js" />
+    <Content Include="Scripts\ckeditor\contents.css" />
+    <Content Include="Scripts\ckeditor\lang\af.js" />
+    <Content Include="Scripts\ckeditor\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\lang\az.js" />
+    <Content Include="Scripts\ckeditor\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\lang\bn.js" />
+    <Content Include="Scripts\ckeditor\lang\bs.js" />
+    <Content Include="Scripts\ckeditor\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\lang\da.js" />
+    <Content Include="Scripts\ckeditor\lang\de-ch.js" />
+    <Content Include="Scripts\ckeditor\lang\de.js" />
+    <Content Include="Scripts\ckeditor\lang\el.js" />
+    <Content Include="Scripts\ckeditor\lang\en-au.js" />
+    <Content Include="Scripts\ckeditor\lang\en-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\lang\en.js" />
+    <Content Include="Scripts\ckeditor\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\lang\es-mx.js" />
+    <Content Include="Scripts\ckeditor\lang\es.js" />
+    <Content Include="Scripts\ckeditor\lang\et.js" />
+    <Content Include="Scripts\ckeditor\lang\eu.js" />
+    <Content Include="Scripts\ckeditor\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\lang\fo.js" />
+    <Content Include="Scripts\ckeditor\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\lang\he.js" />
+    <Content Include="Scripts\ckeditor\lang\hi.js" />
+    <Content Include="Scripts\ckeditor\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\lang\id.js" />
+    <Content Include="Scripts\ckeditor\lang\is.js" />
+    <Content Include="Scripts\ckeditor\lang\it.js" />
+    <Content Include="Scripts\ckeditor\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\lang\ka.js" />
+    <Content Include="Scripts\ckeditor\lang\km.js" />
+    <Content Include="Scripts\ckeditor\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\lang\ku.js" />
+    <Content Include="Scripts\ckeditor\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\lang\mn.js" />
+    <Content Include="Scripts\ckeditor\lang\ms.js" />
+    <Content Include="Scripts\ckeditor\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\lang\no.js" />
+    <Content Include="Scripts\ckeditor\lang\oc.js" />
+    <Content Include="Scripts\ckeditor\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\lang\si.js" />
+    <Content Include="Scripts\ckeditor\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\lang\sq.js" />
+    <Content Include="Scripts\ckeditor\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\lang\th.js" />
+    <Content Include="Scripts\ckeditor\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\lang\tt.js" />
+    <Content Include="Scripts\ckeditor\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\af.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\az.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\de-ch.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en-au.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\es-mx.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\eu.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fo.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\oc.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Scripts\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Scripts\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Scripts\ckeditor\plugins\colordialog\dialogs\colordialog.css" />
+    <Content Include="Scripts\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Scripts\ckeditor\plugins\copyformatting\styles\copyformatting.css" />
+    <Content Include="Scripts\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Scripts\ckeditor\plugins\dialog\styles\dialog.css" />
+    <Content Include="Scripts\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="Scripts\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="Scripts\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Scripts\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Scripts\ckeditor\plugins\icons.png" />
+    <Content Include="Scripts\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Scripts\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="Scripts\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="Scripts\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="Scripts\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="Scripts\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Scripts\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\hidpi\icon-rtl.png" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\icon-rtl.png" />
+    <Content Include="Scripts\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="Scripts\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Scripts\ckeditor\plugins\pastefromgdocs\filter\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\pastetools\filter\common.js" />
+    <Content Include="Scripts\ckeditor\plugins\pastetools\filter\image.js" />
+    <Content Include="Scripts\ckeditor\plugins\preview\images\pagebreak.gif" />
+    <Content Include="Scripts\ckeditor\plugins\preview\preview.html" />
+    <Content Include="Scripts\ckeditor\plugins\preview\styles\screen.css" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\dialog.css" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Scripts\ckeditor\plugins\scayt\skins\moono-lisa\scayt.css" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="Scripts\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Scripts\ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\af.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\az.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\da.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\de-ch.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\en-au.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\en-ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\es-mx.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\eu.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ko.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\lt.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\oc.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ro.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sr-latn.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Scripts\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Scripts\ckeditor\plugins\tableselection\styles\tableselection.css" />
+    <Content Include="Scripts\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Scripts\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="Scripts\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Scripts\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Scripts\ckeditor\plugins\widget\images\handle.png" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Scripts\ckeditor\plugins\wsc\skins\moono-lisa\wsc.css" />
+    <Content Include="Scripts\ckeditor\samples\css\samples.css" />
+    <Content Include="Scripts\ckeditor\samples\img\github-top.png" />
+    <Content Include="Scripts\ckeditor\samples\img\header-bg.png" />
+    <Content Include="Scripts\ckeditor\samples\img\header-separator.png" />
+    <Content Include="Scripts\ckeditor\samples\img\logo.png" />
+    <Content Include="Scripts\ckeditor\samples\img\navigation-tip.png" />
+    <Content Include="Scripts\ckeditor\samples\index.html" />
+    <Content Include="Scripts\ckeditor\samples\js\sample.js" />
+    <Content Include="Scripts\ckeditor\samples\js\sf.js" />
+    <Content Include="Scripts\ckeditor\samples\old\ajax.html" />
+    <Content Include="Scripts\ckeditor\samples\old\api.html" />
+    <Content Include="Scripts\ckeditor\samples\old\appendto.html" />
+    <Content Include="Scripts\ckeditor\samples\old\assets\inlineall\logo.png" />
+    <Content Include="Scripts\ckeditor\samples\old\assets\outputxhtml\outputxhtml.css" />
+    <Content Include="Scripts\ckeditor\samples\old\assets\posteddata.php" />
+    <Content Include="Scripts\ckeditor\samples\old\assets\sample.jpg" />
+    <Content Include="Scripts\ckeditor\samples\old\assets\uilanguages\languages.js" />
+    <Content Include="Scripts\ckeditor\samples\old\datafiltering.html" />
+    <Content Include="Scripts\ckeditor\samples\old\dialog\assets\my_dialog.js" />
+    <Content Include="Scripts\ckeditor\samples\old\dialog\dialog.html" />
+    <Content Include="Scripts\ckeditor\samples\old\divreplace.html" />
+    <Content Include="Scripts\ckeditor\samples\old\enterkey\enterkey.html" />
+    <Content Include="Scripts\ckeditor\samples\old\htmlwriter\assets\outputforflash\outputforflash.swf" />
+    <Content Include="Scripts\ckeditor\samples\old\htmlwriter\assets\outputforflash\swfobject.js" />
+    <Content Include="Scripts\ckeditor\samples\old\htmlwriter\outputforflash.html" />
+    <Content Include="Scripts\ckeditor\samples\old\htmlwriter\outputhtml.html" />
+    <Content Include="Scripts\ckeditor\samples\old\index.html" />
+    <Content Include="Scripts\ckeditor\samples\old\inlineall.html" />
+    <Content Include="Scripts\ckeditor\samples\old\inlinebycode.html" />
+    <Content Include="Scripts\ckeditor\samples\old\inlinetextarea.html" />
+    <Content Include="Scripts\ckeditor\samples\old\jquery.html" />
+    <Content Include="Scripts\ckeditor\samples\old\magicline\magicline.html" />
+    <Content Include="Scripts\ckeditor\samples\old\readonly.html" />
+    <Content Include="Scripts\ckeditor\samples\old\replacebyclass.html" />
+    <Content Include="Scripts\ckeditor\samples\old\replacebycode.html" />
+    <Content Include="Scripts\ckeditor\samples\old\sample.css" />
+    <Content Include="Scripts\ckeditor\samples\old\sample.js" />
+    <Content Include="Scripts\ckeditor\samples\old\sample_posteddata.php" />
+    <Content Include="Scripts\ckeditor\samples\old\tabindex.html" />
+    <Content Include="Scripts\ckeditor\samples\old\toolbar\toolbar.html" />
+    <Content Include="Scripts\ckeditor\samples\old\uicolor.html" />
+    <Content Include="Scripts\ckeditor\samples\old\uilanguages.html" />
+    <Content Include="Scripts\ckeditor\samples\old\wysiwygarea\fullpage.html" />
+    <Content Include="Scripts\ckeditor\samples\old\xhtmlstyle.html" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\css\fontello.css" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\font\LICENSE.txt" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\index.html" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\js\abstracttoolbarmodifier.js" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\js\fulltoolbareditor.js" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\js\toolbarmodifier.js" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\js\toolbartextmodifier.js" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.css" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\codemirror.js" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\javascript.js" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\neo.css" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.css" />
+    <Content Include="Scripts\ckeditor\samples\toolbarconfigurator\lib\codemirror\show-hint.js" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\dialog.css" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\dialog_ie.css" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\dialog_ie8.css" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\dialog_iequirks.css" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\editor.css" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\editor_gecko.css" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\editor_ie.css" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\editor_ie8.css" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\editor_iequirks.css" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\icons.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\icons_hidpi.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\arrow.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\close.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\hidpi\close.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\hidpi\lock-open.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\hidpi\lock.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\hidpi\refresh.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\lock-open.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\lock.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\refresh.png" />
+    <Content Include="Scripts\ckeditor\skins\moono-lisa\images\spinner.gif" />
+    <Content Include="Scripts\ckeditor\styles.js" />
+    <Content Include="Scripts\ckeditor\vendor\promise.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Uploads\New Text Document.txt" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\YouDontApply.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\JobDetails\Create.cshtml" />
+    <Content Include="Views\Login\Edit.cshtml" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Shared\Partialview.cshtml" />
+    <Content Include="Views\Home\Index1.cshtml" />
+    <Content Include="Views\Home\GetJobsByUser1.cshtml" />
+    <Content Include="Views\Home\GetJobsByPublisher1.cshtml" />
+    <Content Include="Views\Home\Details1.cshtml" />
+    <Content Include="Views\Home\ApplyJob1.cshtml" />
+    <Content Include="Views\Home\Contact1.cshtml" />
+    <Content Include="Views\Login\login1.cshtml" />
+    <Content Include="Views\Login\Register1.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\JobDetails\EditJob.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54072</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54072/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
